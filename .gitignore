@@ -111,7 +111,6 @@ m4/wint_t.m4
 m4/xsize.m4
 missing
 module.desktop
-README
 src/.deps/
 src/.libs/
 src/Makefile
