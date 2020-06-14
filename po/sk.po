@@ -13,21 +13,21 @@ msgstr ""
 "Language-Team: Slovak\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/e_mod_config.c:42 src/e_mod_config.c:83
 msgid "DeskTitle Settings"
-msgstr ""
+msgstr "DeskTitle Nastavenie"
 
 #: src/e_mod_config.c:85
 msgid "Label color"
-msgstr ""
+msgstr "Farba textu"
 
 #: src/e_mod_config.c:87
 msgid "Click for the color selector"
-msgstr ""
+msgstr "Klikni pre výber farby"
 
 #: src/e_mod_main.c:196
 msgid "DeskTitle"
@@ -35,16 +35,16 @@ msgstr ""
 
 #: src/e_mod_main.c:268
 msgid "Edit Desktop Name"
-msgstr ""
+msgstr "Edituj Názov Plochy"
 
 #: src/e_mod_main.c:269
 msgid "Enter a name for this desktop:"
-msgstr ""
+msgstr "Zadaj meno pre túto plochu"
 
 #: src/e_mod_main.c:270
 msgid "Save"
-msgstr ""
+msgstr "Ulož"
 
 #: src/e_mod_main.c:279
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenie"

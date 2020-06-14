@@ -38,6 +38,7 @@ AM_CONDITIONAL([HAVE_PO], [false])
 AC_SUBST(LTLIBINTL)
 
 PKG_CHECK_MODULES(E, [enlightenment])
+release=$(pkg-config --variable=release enlightenment)
 MODULE_ARCH="$host_os-$host_cpu"
 AC_SUBST(MODULE_ARCH)
 AC_DEFINE_UNQUOTED(MODULE_ARCH, "$MODULE_ARCH", "Module architecture")
@@ -66,7 +67,7 @@ AC_ARG_ENABLE(homedir-install,
 AC_OUTPUT([
 Makefile
 src/Makefile
-po/Makefile.in
+$po_makefile_in
 module.desktop
 ], [
 ])
