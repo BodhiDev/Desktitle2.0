@@ -1,0 +1,4 @@
+This module simply displays the current desktop name on your desktop, it is
+meant to be used as a Gadget.
+
+You can quickly change the desktop name by double-clicking on the title itself.
