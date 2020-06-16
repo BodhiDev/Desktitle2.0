@@ -1,16 +1,16 @@
 # Italian translations for desktitle package.
 # Copyright (C) 2020 Bodhi Linux development team
 # This file is distributed under the same license as the desktitle package.
-# Robert Wiley <ylee@bodhilinux.com>, 2020.
+# Massimo Maiurana <maiurana@gmail.com>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: desktitle 0.0.1\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2020-06-13 15:00-0400\n"
-"PO-Revision-Date: 2020-06-13 16:15-0400\n"
-"Last-Translator: Robert Wiley <ylee@bodhilinux.com>\n"
-"Language-Team: Italian\n"
+"PO-Revision-Date: 2020-06-16 18:53+0200\n"
+"Last-Translator: Massimo Maiurana <maiurana@gmail.com>\n"
+"Language-Team: General\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,32 +19,32 @@ msgstr ""
 
 #: src/e_mod_config.c:42 src/e_mod_config.c:83
 msgid "DeskTitle Settings"
-msgstr ""
+msgstr "Impostazioni per DeskTitle"
 
 #: src/e_mod_config.c:85
 msgid "Label color"
-msgstr ""
+msgstr "Colore dell'etichetta"
 
 #: src/e_mod_config.c:87
 msgid "Click for the color selector"
-msgstr ""
+msgstr "Cliccare per il selettore dei colori"
 
 #: src/e_mod_main.c:196
 msgid "DeskTitle"
-msgstr ""
+msgstr "DeskTitle"
 
 #: src/e_mod_main.c:268
 msgid "Edit Desktop Name"
-msgstr ""
+msgstr "Modifica nome del desktop"
 
 #: src/e_mod_main.c:269
 msgid "Enter a name for this desktop:"
-msgstr ""
+msgstr "Inserire un nome per questo desktop:"
 
 #: src/e_mod_main.c:270
 msgid "Save"
-msgstr ""
+msgstr "Salva"
 
 #: src/e_mod_main.c:279
 msgid "Settings"
-msgstr ""
+msgstr "Impostazioni"
