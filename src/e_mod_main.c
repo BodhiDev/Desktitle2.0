@@ -1,6 +1,8 @@
 #include <e.h>
 #include "e_mod_main.h"
 
+EINTERN int _e_desktitle_log_dom = -1;
+
 typedef struct _Instance Instance;
 
 struct _Instance
@@ -423,6 +425,9 @@ e_modapi_init(E_Module *m)
          ci->color_a = 255;
          desktitle_config->items = eina_list_append(desktitle_config->items, ci);
       }
+   /* Initialize Einna_log for developers */
+   _e_desktitle_log_dom = eina_log_domain_register("Desktitle", EINA_COLOR_ORANGE);
+   eina_log_domain_level_set("Desktitle", EINA_LOG_LEVEL_INFO);
    desktitle_config->module = m;
    e_gadcon_provider_register(&_gc_class);
 
@@ -454,7 +459,9 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
    E_FREE(desktitle_config);
    E_CONFIG_DD_FREE(conf_item_edd);
    E_CONFIG_DD_FREE(conf_edd);
-
+   /* Shutdown Logger */
+    eina_log_domain_unregister(_e_desktitle_log_dom);
+   _e_desktitle_log_dom = -1;
    return 1;
 }
 
