@@ -11,7 +11,7 @@ The module displays a virtual desktops name and allows one to quickly rename the
 
 # Rationale
 
-At first glance one may wonder why would one care what name is assigned to a virtual desktop? The module is aimed at users that users that like to organize their workflow by keeping all windows dedicated to a certain task on one desktop and switch back and forth between tasks by changing the desktop displayed. This module provides an easy way to see what desktop one is currently at. While the pager module can be configured to display a virtual desktops name and the virtual desktop settings allow one to change the names, this module provides an alternative to the pager module and may make your workflow easier. This is especially true if one prefers keyboard shortcuts to change desktops and or does not even use the pager module or else it is covered up by windows. Desktitle is a bit of fluff designed to make life a little easier for such users.
+At first glance one may wonder why would one care what name is assigned to a virtual desktop? The module is aimed at users that like to organize their workflow by keeping all windows dedicated to a certain task on one desktop and switch back and forth between tasks by changing the desktop displayed. This module provides an easy way to see what desktop one is currently at. While the pager module can be configured to display a virtual desktops name and the virtual desktop settings allow one to change the names, this module provides an alternative to the pager module and may make your workflow easier. This is especially true if one prefers keyboard shortcuts to change desktops and or does not even use the pager module or else it is covered up by windows. Desktitle is a bit of fluff designed to make life a little easier for such users.
 
 # Dependencies
 
@@ -27,7 +27,6 @@ It is recommended Bodhi 5.0 users install from Bodhi's repo:
 sudo apt update
 sudo apt install moksha-module-desktitle
 ```
-> Note: It will be added to Bodhi's repos soon
 
 Other users need to compile the code:
 
@@ -59,7 +58,7 @@ Contributions must be licensed under this project's copyright (see COPYING).
 
 # Help wanted
 
-Nothing in this module has been translated. The needed PO files have been created but we are requesting users of this modules contribute the needed localizations.
+Support for only a few languages are currently provided. The needed PO files have been created but we are requesting users of this modules contribute the needed missing localizations.
 
 Developers may wish to examine our todo file and help implement future features.
 
