@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: desktitle 0.0.1\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2020-06-13 15:00-0400\n"
-"PO-Revision-Date: 2020-06-13 15:53-0400\n"
-"Last-Translator: Robert Wiley <ylee@bodhilinux.com>\n"
+"PO-Revision-Date: 2020-06-16 12:53-0400\n"
+"Last-Translator: Kai Huuhko <kai.huuhko@gmail.com>\n"
 "Language-Team: Finnish\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -19,32 +19,32 @@ msgstr ""
 
 #: src/e_mod_config.c:42 src/e_mod_config.c:83
 msgid "DeskTitle Settings"
-msgstr ""
+msgstr "DeskTitle-asetukset"
 
 #: src/e_mod_config.c:85
 msgid "Label color"
-msgstr ""
+msgstr "Nimen väri"
 
 #: src/e_mod_config.c:87
 msgid "Click for the color selector"
-msgstr ""
+msgstr "Klikkaa avataksesi värivalikon"
 
 #: src/e_mod_main.c:196
 msgid "DeskTitle"
-msgstr ""
+msgstr "DeskTitle"
 
 #: src/e_mod_main.c:268
 msgid "Edit Desktop Name"
-msgstr ""
+msgstr "Muokkaa työpöydän nimeä"
 
 #: src/e_mod_main.c:269
 msgid "Enter a name for this desktop:"
-msgstr ""
+msgstr "Syötä nimi tälle työpöydälle:"
 
 #: src/e_mod_main.c:270
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 #: src/e_mod_main.c:279
 msgid "Settings"
-msgstr ""
+msgstr "Asetukset"
