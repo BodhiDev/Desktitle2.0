@@ -427,7 +427,7 @@ e_modapi_init(E_Module *m)
       }
    /* Initialize Einna_log for developers */
    _e_desktitle_log_dom = eina_log_domain_register("Desktitle", EINA_COLOR_ORANGE);
-   eina_log_domain_level_set("Desktitle", EINA_LOG_LEVEL_INFO);
+   eina_log_domain_level_set("Desktitle", EINA_LOG_LEVEL_DBG);
    desktitle_config->module = m;
    e_gadcon_provider_register(&_gc_class);
 
