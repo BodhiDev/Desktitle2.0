@@ -4,4 +4,5 @@ Name=DeskTitle
 Icon=e-module-desktitle
 X-Enlightenment-ModuleType=utils
 Comment=Gadget to display the current desktop's name.
+Comment[es]=Gadget para desplegar el nombre del escritorio actual.
 Comment[fr]=Un gadget pour afficher le nom du bureau actuel.
