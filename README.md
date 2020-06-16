@@ -11,7 +11,7 @@ The module displays a virtual desktops name and allows one to quickly rename the
 
 # Rationale
 
-At first glance one may wonder why would one care what name is assigned to a virtual desktop? The module is aimed at users that users that like to organize their workflow by keeping all windows deciated a certain task on one desktop and switch back and forth between tasks by changing the desktop displayed. This module provides an easy way to see what desktop one is currently at. Since the pager module does not display a virtual desktops name but the virtual desktop settings allow one to change the names, this module may make your workflow easier. This is especially true if one prefers keyboard shortcuts to change desktops and or does not even use the pager module or else it is covered up by windows. Desktitle is a bit of fluff designed to make life a little easier for such users.
+At first glance one may wonder why would one care what name is assigned to a virtual desktop? The module is aimed at users that users that like to organize their workflow by keeping all windows dedicated to a certain task on one desktop and switch back and forth between tasks by changing the desktop displayed. This module provides an easy way to see what desktop one is currently at. While the pager module can be configured to display a virtual desktops name and the virtual desktop settings allow one to change the names, this module provides an alternative to the pager module and may make your workflow easier. This is especially true if one prefers keyboard shortcuts to change desktops and or does not even use the pager module or else it is covered up by windows. Desktitle is a bit of fluff designed to make life a little easier for such users.
 
 # Dependencies
 
