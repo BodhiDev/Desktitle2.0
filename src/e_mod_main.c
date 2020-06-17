@@ -19,7 +19,7 @@ typedef struct _V_Desk V_Desk;
 
 struct _V_Desk
 {
-   const char *name;
+   char *name;
    int         x;
    int         y;
 };
@@ -263,6 +263,8 @@ _entry_cleanup(Instance *inst)
    V_Desk *cur = _v_desk_current(inst);
    V_Desk *exist = (V_Desk *) eina_list_search_unsorted(edit_global, (Eina_Compare_Cb) _deskcmp, cur);
    edit_global = eina_list_remove(edit_global, exist);
+   free(cur->name);
+   free(exist->name);
    E_FREE(exist);
    E_FREE(cur);
 }
