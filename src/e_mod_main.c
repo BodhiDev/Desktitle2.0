@@ -123,6 +123,7 @@ _gc_shutdown(E_Gadcon_Client *gcc)
 static void
 _eval_instance_size(Instance *inst)
 {
+   EINA_SAFETY_ON_NULL_RETURN(inst);
    Evas_Coord mw, mh, omw, omh;
 
    edje_object_size_min_get(inst->ut_obj, &mw, &mh);
@@ -223,13 +224,10 @@ _gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 static void
 _cb_entry_ok(void *data, char *text)
 {
-   Instance *inst;
-   E_Zone *zone;
-   E_Desk *desk;
-
-   inst = data;
-   zone = inst->gcc->gadcon->zone;
-   desk = e_desk_current_get(zone);
+   EINA_SAFETY_ON_NULL_RETURN(data);
+   Instance *inst = data;
+   E_Zone *zone = inst->gcc->gadcon->zone;
+   E_Desk *desk = e_desk_current_get(zone);
 
    e_desk_name_del(zone->container->num, zone->num, desk->x, desk->y);
    e_desk_name_add(zone->container->num, zone->num, desk->x, desk->y, text);
@@ -241,8 +239,8 @@ _cb_entry_ok(void *data, char *text)
 static void
 _desktitle_cb_menu_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
-   Instance *inst = NULL;
-   if (!(inst = data)) return;
+   EINA_SAFETY_ON_NULL_RETURN(data);
+   Instance *inst = data;
 
    _config_desktitle_module(inst->ci);
 }
@@ -250,12 +248,12 @@ _desktitle_cb_menu_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi _
 static void
 _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
-   Instance *inst;
+   EINA_SAFETY_ON_NULL_RETURN(data);
+   Instance *inst = data;
    Evas_Event_Mouse_Down *ev;
    E_Desk *desk;
    E_Menu_Item *mi = NULL;
 
-   if (!(inst = data)) return;
    ev = event_info;
 
    desk = e_desk_current_get(inst->gcc->gadcon->zone);
@@ -293,11 +291,9 @@ _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUS
 static void
 _desktitle_menu_cb_post(void *data, E_Menu *m __UNUSED__)
 {
-   Instance *inst = NULL;
-
-   if (!(inst = data)) return;
-   if (!inst->menu)
-      return;
+   EINA_SAFETY_ON_NULL_RETURN(data);
+   Instance *inst = data;
+   if (!inst->menu) return;
 
    e_object_del(E_OBJECT(inst->menu));
    inst->menu = NULL;
@@ -356,6 +352,7 @@ _desktitle_config_item_get(const char *id)
 static void
 _desktitle_config_apply(void *data, Config_Item *ci __UNUSED__)
 {
+   EINA_SAFETY_ON_NULL_RETURN(data);
    Instance *inst = data;
 
    edje_object_color_class_set
@@ -475,11 +472,9 @@ e_modapi_save(E_Module *m __UNUSED__)
 static Eina_Bool
 _desktitle_cb_check(void *data)
 {
-   Instance *inst;
+   EINA_SAFETY_ON_NULL_RETURN_VAL(data, EINA_FALSE);
+   Instance *inst = data;
    E_Desk *desk;
-
-   if (!(inst = data))
-      return EINA_FALSE;
 
    desk = e_desk_current_get(inst->gcc->gadcon->zone);
 

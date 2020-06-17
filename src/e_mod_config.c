@@ -66,7 +66,7 @@ _create_data(E_Config_Dialog *cfd)
 static void
 _free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
 {
-   if (!desktitle_config) return;
+   EINA_SAFETY_ON_NULL_RETURN(desktitle_config);
    desktitle_config->config_dialog = NULL;
    E_FREE(cfdata);
 }
