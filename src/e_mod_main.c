@@ -2,7 +2,7 @@
 #include "e_mod_main.h"
 
 EINTERN int _e_desktitle_log_dom = -1;
-Eina_Bool edit_global = EINA_FALSE;
+Eina_List *edit_global = NULL;
 
 typedef struct _Instance Instance;
 
@@ -13,6 +13,15 @@ struct _Instance
    Eina_List       *handlers;
    E_Menu          *menu;
    Config_Item     *ci;
+};
+
+typedef struct _V_Desk V_Desk;
+
+struct _V_Desk
+{
+   const char *name;
+   int         x;
+   int         y;
 };
 
 static E_Gadcon_Client *_gc_init(E_Gadcon *gc, const char *name,
@@ -28,7 +37,6 @@ static void             _desktitle_menu_cb_post(void *data, E_Menu *m __UNUSED__
 static void             _desktitle_cb_menu_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
 static void             _eval_instance_size(Instance *inst);
 static void             _desktitle_config_apply(void *data, Config_Item *ci __UNUSED__);
-
 static Config_Item     *_desktitle_config_item_get(const char *id);
 static Eina_Bool        _desktitle_cb_check(void *data);
 
@@ -41,7 +49,7 @@ Config *desktitle_config = NULL;
 static const E_Gadcon_Client_Class _gc_class = {
    GADCON_CLIENT_CLASS_VERSION, "desktitle",
    {
-      _gc_init, _gc_shutdown,_gc_orient,_gc_label, _gc_icon, _gc_id_new, NULL,
+      _gc_init,                 _gc_shutdown,_gc_orient,_gc_label, _gc_icon, _gc_id_new, NULL,
       NULL
    },
    E_GADCON_CLIENT_STYLE_PLAIN
@@ -222,6 +230,43 @@ _gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
    return ci->id;
 }
 
+V_Desk *
+_v_desk_current(Instance *inst)
+{
+   EINA_SAFETY_ON_NULL_RETURN_VAL(inst, NULL);
+
+   E_Desk *desk;
+   desk = e_desk_current_get(inst->gcc->gadcon->zone);
+   V_Desk *cur = E_NEW(V_Desk, 1);
+   cur->name = strdup(desk->name);
+   cur->x = desk->x;
+   cur->y = desk->y;
+   return cur;
+}
+
+int
+_deskcmp(const void *data1, const void *data2)
+{
+   const V_Desk *vd1 = data1;
+   const V_Desk *vd2 = data2;
+   int ret;
+   ret = strcmp(vd1->name, vd2->name);
+   if (vd1->x != vd2->x || vd1->y != vd2->y)
+      ret = 1;
+   return ret;
+}
+
+static void
+_entry_cleanup(Instance *inst)
+{
+   EINA_SAFETY_ON_NULL_RETURN(inst);
+   V_Desk *cur = _v_desk_current(inst);
+   V_Desk *exist = (V_Desk *) eina_list_search_unsorted(edit_global, (Eina_Compare_Cb) _deskcmp, cur);
+   edit_global = eina_list_remove(edit_global, exist);
+   E_FREE(exist);
+   E_FREE(cur);
+}
+
 static void
 _cb_entry_ok(void *data, char *text)
 {
@@ -230,27 +275,28 @@ _cb_entry_ok(void *data, char *text)
    E_Zone *zone = inst->gcc->gadcon->zone;
    E_Desk *desk = e_desk_current_get(zone);
 
+   _entry_cleanup(inst);
    e_desk_name_del(zone->container->num, zone->num, desk->x, desk->y);
    e_desk_name_add(zone->container->num, zone->num, desk->x, desk->y, text);
    e_desk_name_update();
    _eval_instance_size(inst);
    e_config_save_queue();
-   edit_global = EINA_FALSE;
 }
 
 static void
 _cb_entry_cancel(void *data)
 {
    EINA_SAFETY_ON_NULL_RETURN(data);
-   Instance *inst = data;
-   
-   edit_global = EINA_FALSE;
+
+   _entry_cleanup((Instance *) data);
 }
 
 static void
 _cb_entry_del(void *obj)
 {
-   edit_global = EINA_FALSE;
+   EINA_SAFETY_ON_NULL_RETURN(obj);
+
+   _entry_cleanup((Instance *) e_object_data_get(obj));
 }
 
 static void
@@ -268,21 +314,21 @@ _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUS
    EINA_SAFETY_ON_NULL_RETURN(data);
    Instance *inst = data;
    Evas_Event_Mouse_Down *ev;
-   E_Desk *desk;
    E_Menu_Item *mi = NULL;
    E_Entry_Dialog *ed = NULL;
-
    ev = event_info;
-
-   desk = e_desk_current_get(inst->gcc->gadcon->zone);
 
    if (ev->button == 1 && ev->flags & EVAS_BUTTON_DOUBLE_CLICK)
       {
-         if (edit_global) return;
-         edit_global = EINA_TRUE;
+         V_Desk *cur = _v_desk_current(inst);
+
+         if (eina_list_search_unsorted(edit_global, (Eina_Compare_Cb) _deskcmp, cur))
+            return;
+         edit_global = eina_list_append(edit_global, cur);
          ed = e_entry_dialog_show(D_("Edit Desktop Name"), "preferences-desktop",
-                             D_("Enter a name for this desktop:"), desk->name,
-                             D_("Save"), NULL, _cb_entry_ok, _cb_entry_cancel, inst);
+                                  D_("Enter a name for this desktop:"), cur->name,
+                                  D_("Save"), NULL, _cb_entry_ok, _cb_entry_cancel, inst);
+         e_object_data_set(E_OBJECT(ed), inst);
          e_object_del_attach_func_set(E_OBJECT(ed), _cb_entry_del);
       }
    if ((ev->button == 3) && (!inst->menu))
@@ -391,8 +437,8 @@ _desktitle_config_updated(Config_Item *ci)
 
    for (l = instances; l; l = l->next)
       {
-         Instance *inst;
-         inst = l->data;
+         Instance *inst = l->data;
+         
          if (inst->ci != ci) continue;
          _desktitle_config_apply(inst, ci);
       }
@@ -478,7 +524,7 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
    E_CONFIG_DD_FREE(conf_item_edd);
    E_CONFIG_DD_FREE(conf_edd);
    /* Shutdown Logger */
-    eina_log_domain_unregister(_e_desktitle_log_dom);
+   eina_log_domain_unregister(_e_desktitle_log_dom);
    _e_desktitle_log_dom = -1;
    return 1;
 }
