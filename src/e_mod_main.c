@@ -2,6 +2,7 @@
 #include "e_mod_main.h"
 
 EINTERN int _e_desktitle_log_dom = -1;
+Eina_Bool edit_global = EINA_FALSE;
 
 typedef struct _Instance Instance;
 
@@ -234,6 +235,22 @@ _cb_entry_ok(void *data, char *text)
    e_desk_name_update();
    _eval_instance_size(inst);
    e_config_save_queue();
+   edit_global = EINA_FALSE;
+}
+
+static void
+_cb_entry_cancel(void *data)
+{
+   EINA_SAFETY_ON_NULL_RETURN(data);
+   Instance *inst = data;
+   
+   edit_global = EINA_FALSE;
+}
+
+static void
+_cb_entry_del(void *obj)
+{
+   edit_global = EINA_FALSE;
 }
 
 static void
@@ -253,6 +270,7 @@ _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUS
    Evas_Event_Mouse_Down *ev;
    E_Desk *desk;
    E_Menu_Item *mi = NULL;
+   E_Entry_Dialog *ed = NULL;
 
    ev = event_info;
 
@@ -260,9 +278,12 @@ _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUS
 
    if (ev->button == 1 && ev->flags & EVAS_BUTTON_DOUBLE_CLICK)
       {
-         e_entry_dialog_show(D_("Edit Desktop Name"), "preferences-desktop",
+         if (edit_global) return;
+         edit_global = EINA_TRUE;
+         ed = e_entry_dialog_show(D_("Edit Desktop Name"), "preferences-desktop",
                              D_("Enter a name for this desktop:"), desk->name,
-                             D_("Save"), NULL, _cb_entry_ok, NULL, inst);
+                             D_("Save"), NULL, _cb_entry_ok, _cb_entry_cancel, inst);
+         e_object_del_attach_func_set(E_OBJECT(ed), _cb_entry_del);
       }
    if ((ev->button == 3) && (!inst->menu))
       {
