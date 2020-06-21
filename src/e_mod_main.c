@@ -260,12 +260,18 @@ static void
 _entry_cleanup(Instance *inst)
 {
    EINA_SAFETY_ON_NULL_RETURN(inst);
+   if (!edit_global) return;
+
    V_Desk *cur = _v_desk_current(inst);
    V_Desk *exist = (V_Desk *) eina_list_search_unsorted(edit_global, (Eina_Compare_Cb) _deskcmp, cur);
-   edit_global = eina_list_remove(edit_global, exist);
-   //~ free(cur->name);
-   //~ free(exist->name);
-   E_FREE(exist);
+
+   if (exist)
+   {
+      edit_global = eina_list_remove(edit_global, exist);
+      free(exist->name);
+      E_FREE(exist);
+   }
+   free(cur->name);
    E_FREE(cur);
 }
 
