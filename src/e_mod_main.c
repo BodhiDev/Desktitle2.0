@@ -264,7 +264,7 @@ _entry_cleanup(Instance *inst)
    V_Desk *exist = (V_Desk *) eina_list_search_unsorted(edit_global, (Eina_Compare_Cb) _deskcmp, cur);
    edit_global = eina_list_remove(edit_global, exist);
    //~ free(cur->name);
-   free(exist->name);
+   //~ free(exist->name);
    E_FREE(exist);
    E_FREE(cur);
 }
