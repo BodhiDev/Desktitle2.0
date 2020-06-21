@@ -1,3 +1,11 @@
+moksha-module-desktitle (20200621bodhi1-1) bionic; urgency=low
+
+  * Better placement
+  * Only one edit window per Virtual desktop
+  * Virtual desktop settings added to context menu
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Sun, 21 Jun 2020 09:11:03 -0400
+
 moksha-module-desktitle (20200614bodhi1-1) bionic; urgency=low
 
   * Initial release
