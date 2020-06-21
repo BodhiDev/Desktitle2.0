@@ -317,6 +317,16 @@ _desktitle_cb_menu_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi _
 }
 
 static void
+_desktitle_inst_cb_menu_virtual_desktops_dialog(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
+{
+   Instance *inst;
+
+   inst = data;
+   e_configure_registry_call("screen/virtual_desktops",
+                             inst->gcc->gadcon->zone->container, NULL);
+}
+
+static void
 _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
    EINA_SAFETY_ON_NULL_RETURN(data);
@@ -351,6 +361,14 @@ _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUS
          e_menu_item_callback_set(mi, _desktitle_cb_menu_configure, inst);
 
          m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
+         if (e_configure_registry_exists("screen/virtual_desktops"))
+         {
+            mi = e_menu_item_new_relative(m, NULL);
+            e_menu_item_label_set(mi, D_("Virtual Desktops Settings"));
+            e_util_menu_item_theme_icon_set(mi, "preferences-desktop");
+            e_menu_item_callback_set(mi, _desktitle_inst_cb_menu_virtual_desktops_dialog, inst);
+         }
+         
          e_menu_post_deactivate_callback_set(m, _desktitle_menu_cb_post, inst);
          inst->menu = m;
          e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, NULL, NULL);
@@ -446,7 +464,7 @@ _desktitle_config_updated(Config_Item *ci)
    for (l = instances; l; l = l->next)
       {
          Instance *inst = l->data;
-         
+
          if (inst->ci != ci) continue;
          _desktitle_config_apply(inst, ci);
       }
@@ -550,7 +568,7 @@ _desktitle_cb_check(void *data)
    EINA_SAFETY_ON_NULL_RETURN_VAL(data, EINA_FALSE);
    Instance *inst = data;
    E_Desk *desk;
-   
+
    desk = e_desk_current_get(inst->gcc->gadcon->zone);
 
    if (desk->name != NULL)
@@ -558,6 +576,6 @@ _desktitle_cb_check(void *data)
          edje_object_part_text_set(inst->ut_obj, "desktitle", desk->name);
          return EINA_TRUE;
       }
-   
+
    return EINA_TRUE;
 }
