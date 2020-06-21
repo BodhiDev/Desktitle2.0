@@ -49,7 +49,7 @@ Config *desktitle_config = NULL;
 static const E_Gadcon_Client_Class _gc_class = {
    GADCON_CLIENT_CLASS_VERSION, "desktitle",
    {
-      _gc_init,                 _gc_shutdown,_gc_orient,_gc_label, _gc_icon, _gc_id_new, NULL,
+      _gc_init, _gc_shutdown,_gc_orient,_gc_label, _gc_icon, _gc_id_new, NULL,
       NULL
    },
    E_GADCON_CLIENT_STYLE_PLAIN
@@ -263,7 +263,7 @@ _entry_cleanup(Instance *inst)
    V_Desk *cur = _v_desk_current(inst);
    V_Desk *exist = (V_Desk *) eina_list_search_unsorted(edit_global, (Eina_Compare_Cb) _deskcmp, cur);
    edit_global = eina_list_remove(edit_global, exist);
-   free(cur->name);
+   //~ free(cur->name);
    free(exist->name);
    E_FREE(exist);
    E_FREE(cur);
