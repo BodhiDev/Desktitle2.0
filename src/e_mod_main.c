@@ -59,7 +59,7 @@ static Eina_Bool
 _e_zone_cb_desk_after_show(void *data, int type __UNUSED__, void *event  __UNUSED__)
 {
    _desktitle_cb_check(data);
-   _eval_instance_size(data);
+   
    return ECORE_CALLBACK_PASS_ON;
 }
 
@@ -552,6 +552,6 @@ _desktitle_cb_check(void *data)
          edje_object_part_text_set(inst->ut_obj, "desktitle", desk->name);
          return EINA_TRUE;
       }
-
+   _eval_instance_size(data);
    return EINA_TRUE;
 }
