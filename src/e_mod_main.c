@@ -59,7 +59,7 @@ static Eina_Bool
 _e_zone_cb_desk_after_show(void *data, int type __UNUSED__, void *event  __UNUSED__)
 {
    _desktitle_cb_check(data);
-   
+   _eval_instance_size(data);
    return ECORE_CALLBACK_PASS_ON;
 }
 
@@ -182,7 +182,7 @@ _eval_instance_size(Instance *inst)
          evas_object_geometry_get(inst->ut_obj, NULL, NULL, &ow, &oh);
          evas_object_resize(inst->ut_obj, sw, sh);
          edje_object_parts_extends_calc(inst->ut_obj, &x, &y, &mw, &mh);
-         evas_object_resize(inst->ut_obj, mw + 10, mh);
+         evas_object_resize(inst->ut_obj, ow, oh);
       }
 
    if (mw < 10) mw = 10;
@@ -550,7 +550,7 @@ _desktitle_cb_check(void *data)
    EINA_SAFETY_ON_NULL_RETURN_VAL(data, EINA_FALSE);
    Instance *inst = data;
    E_Desk *desk;
-
+   
    desk = e_desk_current_get(inst->gcc->gadcon->zone);
 
    if (desk->name != NULL)
@@ -558,6 +558,6 @@ _desktitle_cb_check(void *data)
          edje_object_part_text_set(inst->ut_obj, "desktitle", desk->name);
          return EINA_TRUE;
       }
-   _eval_instance_size(data);
+   
    return EINA_TRUE;
 }
