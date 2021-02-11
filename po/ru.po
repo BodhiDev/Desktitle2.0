@@ -20,15 +20,15 @@ msgstr ""
 
 #: src/e_mod_config.c:42 src/e_mod_config.c:83
 msgid "DeskTitle Settings"
-msgstr ""
+msgstr "Настройки DeskTitle"
 
 #: src/e_mod_config.c:85
 msgid "Label color"
-msgstr ""
+msgstr "Цвет метки"
 
 #: src/e_mod_config.c:87
 msgid "Click for the color selector"
-msgstr ""
+msgstr "Щёлкните для выбора цвета"
 
 #: src/e_mod_main.c:196
 msgid "DeskTitle"
@@ -36,16 +36,16 @@ msgstr ""
 
 #: src/e_mod_main.c:268
 msgid "Edit Desktop Name"
-msgstr ""
+msgstr "Изменение названия рабочего стола"
 
 #: src/e_mod_main.c:269
 msgid "Enter a name for this desktop:"
-msgstr ""
+msgstr "Введите название этого рабочего стола:"
 
 #: src/e_mod_main.c:270
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #: src/e_mod_main.c:279
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
