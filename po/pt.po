@@ -2,6 +2,7 @@
 # Copyright (C) 2020 Bodhi Linux development team
 # This file is distributed under the same license as the desktitle package.
 # Robert Wiley <ylee@bodhilinux.com>, 2020.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
 #
 msgid ""
 msgstr ""
