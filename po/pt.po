@@ -8,43 +8,44 @@ msgstr ""
 "Project-Id-Version: desktitle 0.0.1\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2020-06-13 15:00-0400\n"
-"PO-Revision-Date: 2020-06-13 16:24-0400\n"
-"Last-Translator: Robert Wiley <ylee@bodhilinux.com>\n"
+"PO-Revision-Date: 2021-05-19 11:00+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
 
 #: src/e_mod_config.c:42 src/e_mod_config.c:83
 msgid "DeskTitle Settings"
-msgstr ""
+msgstr "Definições DeskTitle"
 
 #: src/e_mod_config.c:85
 msgid "Label color"
-msgstr ""
+msgstr "Cor da etiqueta"
 
 #: src/e_mod_config.c:87
 msgid "Click for the color selector"
-msgstr ""
+msgstr "Clique para escolher a cor"
 
 #: src/e_mod_main.c:196
 msgid "DeskTitle"
-msgstr ""
+msgstr "DeskTitle"
 
 #: src/e_mod_main.c:268
 msgid "Edit Desktop Name"
-msgstr ""
+msgstr "Editar o nome da área de trabalho"
 
 #: src/e_mod_main.c:269
 msgid "Enter a name for this desktop:"
-msgstr ""
+msgstr "Introduza um nome para esta área de trabalho:"
 
 #: src/e_mod_main.c:270
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: src/e_mod_main.c:279
 msgid "Settings"
-msgstr ""
+msgstr "Definições"
