@@ -1,45 +1,23 @@
-collections
-{
-   group
-     {
-	name: "modules/desktitle/main";
-	parts
-	  {
-	     part
-	       {
-		  name:		"desktitle";
-		  type:		TEXT;
-		  effect:	SOFT_SHADOW;
-		  mouse_events:	1;
-		  description
-		    {
-		       state:	"default" 0.0;
-		       rel1
-			 {
-			    relative: 0.0 0.0;
-			    offset: 0 0;
-			 }
-		       rel2
-			 {
-			    relative: 1.0 1.0;
-			    offset: 0 0;
-			 }
-		       color:	255 255 255 255;
-		       color2:	0 0 0 96;
-		       color3:	0 0 0 32;
-		       color_class: "border_title_active";
-		       text
-			 {
-			    text:	"desktitle";
-			    font:	"Sans:style=Bold,Edje-Vera-Bold";
-			    size:	16;
-			    min:	1 1;
-		        ellipsis: -1;
-			    text_class:	"module_large";
-			 }
-		    }
-	       }
-	  }
-     }
-}
+#define VISIBLE "#FFFFFF"
 
+collections {
+	 group { "modules/desktitle/main";
+		parts {
+			text { "desktitle"; effect: SOFT_SHADOW; mouse;
+				desc { "default"; color: VISIBLE; color_class: "border_title_active";
+					color2: "#00000060";
+					color3: "#00000020";
+					rel1.relative: 0.0 0.0;
+					rel1.offset: 0 0;
+					rel2.relative: 1.0 1.0;
+					rel2.offset: 0 0;
+					text.text: "desktitle";
+					text.font: "Sans:style=Bold,Edje-Vera-Bold"; text.size: 16;
+					text.min: 1 1;
+					text.ellipsis: -1;
+					text.text_class: "module_large";
+				}
+			}
+		}
+	}
+}
