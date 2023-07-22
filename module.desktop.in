@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Link
 Name=DeskTitle
+Name[sk]=DeskTitle
 Icon=e-module-desktitle
 X-Enlightenment-ModuleType=utils
 Comment=Gadget to display the current desktop's name.
@@ -10,3 +11,4 @@ Comment[fi]=Vempain nykyisen työpöydän nimen näyttämiseen.
 Comment[fr]=Un gadget pour afficher le nom du bureau actuel.
 Comment{it]=Gadget per visualizzare il nome del desktop attuale.
 Comment[ru]=Гаджет для отображения названия текущего рабочего стола.
+Comment[sk]=Widget pre zobrazenie názvu aktuálnej plochy.
