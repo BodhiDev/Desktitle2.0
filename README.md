@@ -68,7 +68,7 @@ Thanks in advance.
 
 This module is part of our current project to restore to functioning all broken e17 modues we know about. These modules can be broken by enlightenment code changes or EFL API changes. 
 
-Donations to [Bodhi Linux](https://www.bodhilinux.com/donate/) would be greatly appreciated and keep our distro moving along. But if you like the work we do for Bodhi and wish to see more of it, we'd be happy about a donation. You can either donate via [PayPall](https://www.paypal.com/paypalme/rbtylee) or [Liberapay](https://liberapay.com/ylee/). 
+Donations to [Bodhi Linux](https://www.bodhilinux.com/donate/) would be greatly appreciated and keep our distro moving along. But if you like the work we do for Bodhi and wish to see more of it, we'd be happy about a donation. You can either donate via [PayPal](https://www.paypal.com/paypalme/rbtylee) or [Liberapay](https://liberapay.com/ylee/). 
 
 # License
 
