@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Link
 Name=DeskTitle
+Name[hi]=डेस्कटाइटल
 Name[sk]=DeskTitle
 Icon=e-module-desktitle
 X-Enlightenment-ModuleType=utils
@@ -9,6 +10,7 @@ Comment[be]=Гаджэт для адлюстравання назвы працо
 Comment[es]=Gadget para desplegar el nombre del escritorio actual.
 Comment[fi]=Vempain nykyisen työpöydän nimen näyttämiseen.
 Comment[fr]=Un gadget pour afficher le nom du bureau actuel.
+Comment[hi]=वर्तमान डेस्कटॉप का नाम प्रदर्शित करने वाला गैजेट।
 Comment[it]=Gadget per visualizzare il nome del desktop attuale.
 Comment[pt]=Gadget para mostrar o nome da área de trabalho atual.
 Comment[ru]=Гаджет для отображения названия текущего рабочего стола.
