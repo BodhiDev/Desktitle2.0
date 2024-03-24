@@ -11,7 +11,6 @@ struct _Instance
    E_Gadcon_Client *gcc;
    Evas_Object     *ut_obj;
    Eina_List       *handlers;
-   E_Menu          *menu;
    Config_Item     *ci;
 };
 
@@ -33,7 +32,6 @@ static Evas_Object     *_gc_icon(const E_Gadcon_Client_Class *client_class __UNU
 static const char      *_gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__);
 static void             _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__,
                                                  void *event_info);
-static void             _desktitle_menu_cb_post(void *data, E_Menu *m __UNUSED__);
 static void             _desktitle_cb_menu_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__);
 static void             _eval_instance_size(Instance *inst);
 static void             _desktitle_config_apply(void *data, Config_Item *ci __UNUSED__);
@@ -111,13 +109,6 @@ _gc_shutdown(E_Gadcon_Client *gcc)
          evas_object_event_callback_del(inst->ut_obj, EVAS_CALLBACK_MOUSE_DOWN,
                                         _desktitle_cb_mouse_down);
          evas_object_del(inst->ut_obj);
-      }
-
-   if (inst->menu)
-      {
-         e_menu_post_deactivate_callback_set(inst->menu, NULL, NULL);
-         e_object_del(E_OBJECT(inst->menu));
-         inst->menu = NULL;
       }
 
    while (inst->handlers)
@@ -349,7 +340,7 @@ _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUS
          e_object_data_set(E_OBJECT(ed), inst);
          e_object_del_attach_func_set(E_OBJECT(ed), _cb_entry_del);
       }
-   if ((ev->button == 3) && (!inst->menu))
+   if (ev->button == 3)
       {
          E_Menu *m;
          int x, y;
@@ -369,8 +360,6 @@ _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUS
             e_menu_item_callback_set(mi, _desktitle_inst_cb_menu_virtual_desktops_dialog, inst);
          }
          
-         e_menu_post_deactivate_callback_set(m, _desktitle_menu_cb_post, inst);
-         inst->menu = m;
          e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, NULL, NULL);
          e_menu_activate_mouse(m,
                                e_util_zone_current_get(e_manager_current_get()),
@@ -379,17 +368,6 @@ _desktitle_cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUS
          evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
                                   EVAS_BUTTON_NONE, ev->timestamp, NULL);
       }
-}
-
-static void
-_desktitle_menu_cb_post(void *data, E_Menu *m __UNUSED__)
-{
-   EINA_SAFETY_ON_NULL_RETURN(data);
-   Instance *inst = data;
-   if (!inst->menu) return;
-
-   e_object_del(E_OBJECT(inst->menu));
-   inst->menu = NULL;
 }
 
 static Config_Item *
