@@ -35,9 +35,9 @@ First install all the needed dependencies. Note this includes not only EFL but t
 Then the usual:
 
 ```ShellSession
-./autogen.sh
-make
-sudo make install
+meson . build
+ninja -C build
+sudo ninja -C build install
 ```
 
 # Pure enlightenment
@@ -68,11 +68,11 @@ Thanks in advance.
 
 This module is part of our current project to restore to functioning all broken e17 modues we know about. These modules can be broken by enlightenment code changes or EFL API changes. 
 
-Donations to [Bodhi Linux](https://www.bodhilinux.com/donate/) would be greatly appreciated and keep our distro moving along. But if you like the work we do for Bodhi and wish to see more of it, we'd be happy about a donation. You can either donate via [PayPal](https://www.paypal.com/paypalme/rbtylee) or [Liberapay](https://liberapay.com/ylee/). 
+Donations to [Bodhi Linux](https://www.bodhilinux.com/donate/) would be greatly appreciated and keep our distro moving along. But if you like the work we do for Bodhi and wish to see more of it, we'd be happy about a donation. You can either donate via [PayPal](https://www.paypal.com/paypalme/rbtylee). 
 
 # License
 
-This software is released under the same License used in alot of the other Enlightenment projects. It is a custom license but fully Open Source. Please see the included [COPYING](https://github.com/rbtylee/launcher-spellchecker/blob/master/COPYING) file and for a less legalese explanation [COPYING-PLAIN](https://github.com/rbtylee/launcher-spellchecker/blob/master/COPYING-PLAIN).
+This software is released under the same License used in alot of the other Enlightenment projects. It is a custom license but fully Open Source. Please see the included [COPYING](https://github.com/BodhiDev/Desktitle2.0/blob/master/COPYING) file and for a less legalese explanation [COPYING-PLAIN](https://github.com/BodhiDev/Desktitle2.0/blob/master/COPYING-PLAIN).
 
 Simply put, this software is free to use, modify and redistribute as you see fit. I do ask that you keep the copyright notice the same in any modifications.
 
