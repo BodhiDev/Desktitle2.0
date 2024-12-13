@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktitle 0.0.1\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2020-06-13 15:00-0400\n"
+"POT-Creation-Date: 2024-12-13 15:29-0500\n"
 "PO-Revision-Date: 2020-06-13 16:23-0400\n"
 "Last-Translator: qrxnz <send@qrxnz.dev>\n"
 "Language-Team: Polish\n"
@@ -18,34 +18,38 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: src/e_mod_config.c:42 src/e_mod_config.c:83
+#: src/e_mod_config.c:40 src/e_mod_config.c:81
 msgid "DeskTitle Settings"
 msgstr "Ustawienia DeskTitle"
 
-#: src/e_mod_config.c:85
+#: src/e_mod_config.c:83
 msgid "Label color"
 msgstr "Etykieta koloru"
 
-#: src/e_mod_config.c:87
+#: src/e_mod_config.c:85
 msgid "Click for the color selector"
 msgstr "Kliknij aby wybrać kolor"
 
-#: src/e_mod_main.c:196
+#: src/e_mod_main.c:197
 msgid "DeskTitle"
-msgstr ""
+msgstr "DeskTitle"
 
-#: src/e_mod_main.c:268
+#: src/e_mod_main.c:337
 msgid "Edit Desktop Name"
-msgstr ""
+msgstr "Edytuj nazwę pulpitu"
 
-#: src/e_mod_main.c:269
+#: src/e_mod_main.c:338
 msgid "Enter a name for this desktop:"
 msgstr "Wpisz nazwę dla pulpitu"
 
-#: src/e_mod_main.c:270
+#: src/e_mod_main.c:339
 msgid "Save"
 msgstr "Zapisz"
 
-#: src/e_mod_main.c:279
+#: src/e_mod_main.c:350
 msgid "Settings"
 msgstr "Ustawienia"
+
+#: src/e_mod_main.c:358
+msgid "Virtual Desktops Settings"
+msgstr "Ustawienia wirtualnych pulpitów"

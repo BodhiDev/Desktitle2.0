@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the desktitle package.
 # Robert Wiley <ylee@bodhilinux.com>, 2020.
 # similar <similar@orange.fr>, 2020.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: desktitle 0.0.1\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2020-06-13 15:00-0400\n"
+"POT-Creation-Date: 2024-12-13 15:29-0500\n"
 "PO-Revision-Date: 2020-06-16 06:19+0200\n"
 "Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
 "Language-Team: French\n"
@@ -19,34 +19,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: src/e_mod_config.c:42 src/e_mod_config.c:83
+#: src/e_mod_config.c:40 src/e_mod_config.c:81
 msgid "DeskTitle Settings"
 msgstr "Paramètres de DeskTitle"
 
-#: src/e_mod_config.c:85
+#: src/e_mod_config.c:83
 msgid "Label color"
 msgstr "Couleur de l'étiquette"
 
-#: src/e_mod_config.c:87
+#: src/e_mod_config.c:85
 msgid "Click for the color selector"
 msgstr "Cliquer pour choisir la couleur"
 
-#: src/e_mod_main.c:196
+#: src/e_mod_main.c:197
 msgid "DeskTitle"
 msgstr "DeskTitle"
 
-#: src/e_mod_main.c:268
+#: src/e_mod_main.c:337
 msgid "Edit Desktop Name"
 msgstr "Modifier le nom du bureau"
 
-#: src/e_mod_main.c:269
+#: src/e_mod_main.c:338
 msgid "Enter a name for this desktop:"
 msgstr "Saisir un nom pour ce bureau :"
 
-#: src/e_mod_main.c:270
+#: src/e_mod_main.c:339
 msgid "Save"
 msgstr "Enregistrer"
 
-#: src/e_mod_main.c:279
+#: src/e_mod_main.c:350
 msgid "Settings"
 msgstr "Configuration"
+
+#: src/e_mod_main.c:358
+msgid "Virtual Desktops Settings"
+msgstr "Paramétrage des bureaux virtuels"
