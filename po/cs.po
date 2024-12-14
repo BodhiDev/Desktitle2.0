@@ -19,36 +19,36 @@ msgstr ""
 
 #: src/e_mod_config.c:40 src/e_mod_config.c:81
 msgid "DeskTitle Settings"
-msgstr ""
+msgstr "Nastavení DeskTitle"
 
 #: src/e_mod_config.c:83
 msgid "Label color"
-msgstr ""
+msgstr "Farba textu"
 
 #: src/e_mod_config.c:85
 msgid "Click for the color selector"
-msgstr ""
+msgstr "Klik pro výběr farby"
 
 #: src/e_mod_main.c:197
 msgid "DeskTitle"
-msgstr ""
+msgstr "DeskTitle"
 
 #: src/e_mod_main.c:337
 msgid "Edit Desktop Name"
-msgstr ""
+msgstr "Edituj Název Plochy"
 
 #: src/e_mod_main.c:338
 msgid "Enter a name for this desktop:"
-msgstr ""
+msgstr "Zadej jméno pro tuto plochu"
 
 #: src/e_mod_main.c:339
 msgid "Save"
-msgstr ""
+msgstr "Ulož"
 
 #: src/e_mod_main.c:350
 msgid "Settings"
-msgstr ""
+msgstr "Nastavení"
 
 #: src/e_mod_main.c:358
 msgid "Virtual Desktops Settings"
-msgstr ""
+msgstr "Nastavení Virtuálnich Ploch"
