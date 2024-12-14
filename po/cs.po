@@ -35,11 +35,11 @@ msgstr "DeskTitle"
 
 #: src/e_mod_main.c:337
 msgid "Edit Desktop Name"
-msgstr "Edituj Název Plochy"
+msgstr "Zadejte Název Plochy"
 
 #: src/e_mod_main.c:338
 msgid "Enter a name for this desktop:"
-msgstr "Zadej jméno pro tuto plochu"
+msgstr "Zadejte název pro tuto plochu:"
 
 #: src/e_mod_main.c:339
 msgid "Save"
