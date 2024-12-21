@@ -10,7 +10,6 @@ gettext_domain = 'e-module-' + meson.project_name()
 #### Enlightenment ####
 dep_e = dependency('enlightenment')
 e_modules_dir = dep_e.get_variable('modules')
-e_release = dep_e.get_variable('release')
 e_module_arch = dep_e.get_variable('module_arch')
 
 #### Install dirs ####
