@@ -27,7 +27,7 @@ msgstr "Farba textu"
 
 #: src/e_mod_config.c:85
 msgid "Click for the color selector"
-msgstr "Klik pro výběr farby"
+msgstr "Klik pro výběr barvy"
 
 #: src/e_mod_main.c:197
 msgid "DeskTitle"
