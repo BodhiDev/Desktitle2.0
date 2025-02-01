@@ -1,11 +1,11 @@
-# Russian translations for desktitle package.
-# Copyright (C) 2020 Bodhi Linux development team
-# This file is distributed under the same license as the desktitle package.
+# Russian translation for the Desktitle module.
+# This file is put in the public domain.
+#
 # R0bur <robursw@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: desktitle 0.0.1\n"
+"Project-Id-Version: desktitle\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-13 15:29-0500\n"
 "PO-Revision-Date: 2023-07-03 21:00+0300\n"

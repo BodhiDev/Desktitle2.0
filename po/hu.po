@@ -1,15 +1,15 @@
-# Hungarian translations for desktitle package.
-# Copyright (C) 2020 Bodhi Linux development team
-# This file is distributed under the same license as the desktitle package.
-# Robert Wiley <ylee@bodhilinux.com>, 2020.
+# Hungarian translation for the Desktitle module.
+# This file is put in the public domain.
+#
+# Automatically generated, 2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: desktitle 0.0.1\n"
+"Project-Id-Version: desktitle\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-13 15:29-0500\n"
 "PO-Revision-Date: 2020-06-13 16:14-0400\n"
-"Last-Translator: Robert Wiley <ylee@bodhilinux.com>\n"
+"Last-Translator: Automatically generated\n"
 "Language-Team: Hungarian\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
