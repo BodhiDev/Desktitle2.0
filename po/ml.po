@@ -1,4 +1,4 @@
-# Malayalam translations for desktitle package.
+# Malayalam translations for the Desktitle module.
 # This file is put in the public domain.
 #
 # Indraneel Rajeevan <https://github.com/indraneel12>, 2025.
