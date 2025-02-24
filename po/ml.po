@@ -1,53 +1,54 @@
 # Malayalam translations for desktitle package.
 # This file is put in the public domain.
 #
-# Automatically generated, 2025.
+# Indraneel Rajeevan <https://github.com/indraneel12>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: desktitle\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2025-01-31 07:39-0500\n"
-"PO-Revision-Date: 2025-01-31 07:39-0500\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-02-24 17:46+0530\n"
+"Last-Translator: Indraneel Rajeevan <https://github.com/indraneel12>\n"
 "Language-Team: Malayalam\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: src/e_mod_config.c:40 src/e_mod_config.c:81
 msgid "DeskTitle Settings"
-msgstr ""
+msgstr "ഡെസ്ക്ടൈറ്റിൽ ക്രമീകരണങ്ങൾ"
 
 #: src/e_mod_config.c:83
 msgid "Label color"
-msgstr ""
+msgstr "ലേബൽ നിറം"
 
 #: src/e_mod_config.c:85
 msgid "Click for the color selector"
-msgstr ""
+msgstr "കളർ സെലക്ടറിനായി ക്ലിക്ക് ചെയ്യുക"
 
 #: src/e_mod_main.c:197
 msgid "DeskTitle"
-msgstr ""
+msgstr "ഡെസ്ക്ടൈറ്റിൽ"
 
 #: src/e_mod_main.c:337
 msgid "Edit Desktop Name"
-msgstr ""
+msgstr "ഡെസ്ക്ടോപ്പിന്റെ പേര് എഡിറ്റ് ചെയ്യുക"
 
 #: src/e_mod_main.c:338
 msgid "Enter a name for this desktop:"
-msgstr ""
+msgstr "ഈ ഡെസ്ക്ടോപ്പിനായി ഒരു പേര് നൽകുക:"
 
 #: src/e_mod_main.c:339
 msgid "Save"
-msgstr ""
+msgstr "സേവ്"
 
 #: src/e_mod_main.c:350
 msgid "Settings"
-msgstr ""
+msgstr "ക്രമീകരണങ്ങൾ"
 
 #: src/e_mod_main.c:358
 msgid "Virtual Desktops Settings"
-msgstr ""
+msgstr "വെർച്വൽ ഡെസ്ക്ടോപ്പുകളുടെ ക്രമീകരണങ്ങൾ"
