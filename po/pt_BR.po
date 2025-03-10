@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: desktitle\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2025-01-31 07:39-0500\n"
+"PO-Revision-Date: 2025-03-10 15:24-0300\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: src/e_mod_config.c:40 src/e_mod_config.c:81
+msgid "DeskTitle Settings"
+msgstr "Configurações do DeskTitle"
+
+#: src/e_mod_config.c:83
+msgid "Label color"
+msgstr "Cor da etiqueta"
+
+#: src/e_mod_config.c:85
+msgid "Click for the color selector"
+msgstr "Clique para o seletor de cor"
+
+#: src/e_mod_main.c:197
+msgid "DeskTitle"
+msgstr "DeskTitle"
+
+#: src/e_mod_main.c:337
+msgid "Edit Desktop Name"
+msgstr "Editar nome da Área de Trabalho"
+
+#: src/e_mod_main.c:338
+msgid "Enter a name for this desktop:"
+msgstr "Insira um nome para esta Área de Trabalho:"
+
+#: src/e_mod_main.c:339
+msgid "Save"
+msgstr "Salvar"
+
+#: src/e_mod_main.c:350
+msgid "Settings"
+msgstr "Configurações"
+
+#: src/e_mod_main.c:358
+msgid "Virtual Desktops Settings"
+msgstr "Configurações de Áreas de Trabalho virtuais"
