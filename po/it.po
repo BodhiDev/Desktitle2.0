@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-13 15:29-0500\n"
 "PO-Revision-Date: 2020-06-16 18:53+0200\n"
-"Last-Translator: Massimo Maiurana <maiurana@gmail.com>\n"
+"Last-Translator: diekrz2\n"
 "Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -53,3 +53,4 @@ msgstr "Impostazioni"
 #: src/e_mod_main.c:358
 msgid "Virtual Desktops Settings"
 msgstr "Impostazioni Desktop Virtuali"
+
