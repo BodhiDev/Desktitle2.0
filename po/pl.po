@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2024-12-13 15:29-0500\n"
 "PO-Revision-Date: 2020-06-13 16:23-0400\n"
-"Last-Translator: qrxnz <send@qrxnz.dev>\n"
+"Last-Translator: diekrz2\n"
 "Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr "Ustawienia DeskTitle"
 
 #: src/e_mod_config.c:83
 msgid "Label color"
-msgstr "Etykieta koloru"
+msgstr "Kolor etykiety"
 
 #: src/e_mod_config.c:85
 msgid "Click for the color selector"

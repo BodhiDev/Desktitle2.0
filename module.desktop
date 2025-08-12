@@ -1,17 +1,20 @@
 [Desktop Entry]
 Type=Link
 Name=DeskTitle
+Name[cs]=DeskTitle
 Name[es]=DeskTitle
 Name[hi]=डेस्कटाइटल
+Name[it]=DeskTitle
 Name[ml]=ഡെസ്ക്ടൈറ്റിൽ
 Name[mr]=
-Name[sk]=DeskTitle
-Name[cs]=DeskTitle
+Name[pl]=DeskTitle
 Name[pt_BR]=DeskTitle
+Name[sk]=DeskTitle
 Icon=e-module-desktitle
 X-Enlightenment-ModuleType=utils
 Comment=Gadget to display the current desktop's name.
 Comment[be]=Гаджэт для адлюстравання назвы працоўнага стала.
+Comment[cs]=Widget pro zobrazení názvu aktuální plochy.
 Comment[es]=Gadget para desplegar el nombre del escritorio actual.
 Comment[fi]=Vempain nykyisen työpöydän nimen näyttämiseen.
 Comment[fr]=Un gadget pour afficher le nom du bureau actuel.
@@ -19,8 +22,9 @@ Comment[hi]=वर्तमान डेस्कटॉप का नाम प�
 Comment[it]=Gadget per visualizzare il nome del desktop attuale.
 Comment[ml]=നിലവിലുള്ള ഡെസ്ക്ടോപ്പിന്റെ പേര് പ്രദർശിപ്പിക്കുന്നതിനുള്ള ഗാഡ്‌ജെറ്റ്.
 Comment[mr]=
+Comment[pl]=Gadżet wyświetlający nazwę bieżącego pulpitu.
 Comment[pt]=Gadget para mostrar o nome da área de trabalho atual.
+Comment[pt_BR]=Gadget para mostrar o nome da Área de Trabalho atual.
 Comment[ru]=Гаджет для отображения названия текущего рабочего стола.
 Comment[sk]=Widget pre zobrazenie názvu aktuálnej plochy.
-Comment[cs]=Widget pro zobrazení názvu aktuální plochy.
-Comment[pt_BR]=Gadget para mostrar o nome da Área de Trabalho atual.
+

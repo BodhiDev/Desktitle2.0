@@ -4,7 +4,7 @@
 
 This module is a [Bodhi Linux](https://www.bodhilinux.com/) fork and improvement of the abandoned and no longer functional module [desktitle](https://github.com/tamentis/desktitle).
 
-The module displays a virtual desktops name and allows one to quickly rename the virtual desktop by double clicking the name. Text color can be changed via the module's settings. Thanks to  Štefan Uram for seeing the necessity of this option and implementing it. Any further customizations of this modules apperance require modifying the modules theme (edj file).
+The module displays a virtual desktops name and allows one to quickly rename the virtual desktop by double clicking the name. Text color can be changed via the module's settings. Thanks to  Štefan Uram for seeing the necessity of this option and implementing it. Any further customizations of this modules appearance require modifying the modules theme (edj file).
 <div align="center">
   <img src="https://i.imgur.com/Cj1Snsc.png">
 </div>
