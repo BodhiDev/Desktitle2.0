@@ -3,6 +3,7 @@
 #
 # Massimo Maiurana <maiurana@gmail.com>, 2020.
 # 
+
 msgid ""
 msgstr ""
 "Project-Id-Version: desktitle\n"
@@ -51,4 +52,4 @@ msgstr "Impostazioni"
 
 #: src/e_mod_main.c:358
 msgid "Virtual Desktops Settings"
-msgstr "Desktop virtuali"
+msgstr "Impostazioni Desktop Virtuali"
